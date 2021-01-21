@@ -13,7 +13,7 @@
 
 Changelog www.apachelounge.com/viewtopic.php?p=31065
 
-Build with Visual Studio® 2019 (VS16)
+Build with Visual StudioÂ® 2019 (VS16)
 
 # Install:
 
@@ -23,6 +23,16 @@ Build with Visual Studio® 2019 (VS16)
 # Add to your httpd.conf
 
 LoadModule evasive_module modules/mod_evasive.so
+
+<IfModule evasive_module>
+    DOSEnabled          true
+    DOSHashTableSize    3097
+    DOSPageCount        2
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   10
+</IfModule>
 
 
 # Directives provided by mod_evasive
